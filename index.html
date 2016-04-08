@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Bootstrap 实例 - 响应式实用工具</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <link href="css/placeholder.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+   
+   <!--[if lte IE 9]>
+   <script src="js/placeholder.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <input id="input1" type="text" placeholder="请填入姓名" />
+  <input id="input2" type="text" placeholder="请填入手机号码" />
+  <input id="input3" type="text" placeholder="请填入邮箱" />
+
+  <textarea id="textarea1" placeholder="请输入备注"></textarea>
+
+  <br/>
+  <input id="button1" type="button" value="提交" />
+
+  <script>
+    //测试数据
+    $(function(){
+      $('#button1').click(function(){
+        //获取input、textarea值之前需要校验一下数据是否填写，以下函数在获取之前一定要调用
+        fixInitPlaceholder();
+
+
+
+        //举例代码块
+        var _input1 = $('#input1').val();
+        var _input2 = $('#input2').val();
+        var _input3 = $('#input3').val();
+
+        var _textarea = $('#textarea1').val();
+
+        console.log(_input1);
+        console.log(_input2);
+        console.log(_input3);
+        console.log(_textarea);
+      });
+    });
+  </script>
+</body>
+</html>
